@@ -1,0 +1,148 @@
+/* style.css */
+
+/* 设置颜色 */
+:root {
+    --primary-orange: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+    --very-dark-blue: hsl(220, 13%, 13%);
+    --dark-grayish-blue: hsl(219, 9%, 45%);
+    --grayish-blue: hsl(220, 14%, 75%);
+    --light-grayish-blue: hsl(223, 64%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black-opacity-75: hsla(0, 0%, 0%, 0.75);
+}
+
+/* 设置字体样式 */
+body {
+    font-size: 16px;
+}
+
+/* 布局样式 */
+.container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    min-height: 100vh; /* 设置最小高度，保证垂直居中生效 */
+}
+
+.left-content {
+    margin-right: 10px; /* 右侧间距，根据需要调整 */
+}
+
+.right-content {
+    margin-left: 10px; /* 左侧间距，根据需要调整 */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.col-md-6 {
+    flex: 0 0 calc(50% - 20px);
+}
+
+/* 产品图片样式 */
+.large-image {
+    width: 600px; /* 设置宽度为100%以适应父元素 */
+    max-height: 600px;
+    border-radius: 10px; /* 添加圆角 */
+}
+
+.small-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* 图片之间的间距 */
+    justify-content: space-between; /* 居中对齐小图 */
+
+}
+
+.small-image {
+    width: 100px;
+    height: 100%; /* 正方形 */
+    cursor: pointer;
+    border-radius: 5px; /* 添加圆角 */
+    transition: border-color 0.3s, filter 0.3s;
+}
+
+.small-image.selected {
+    border: 2px solid hsl(26, 100%, 55%);
+    filter: brightness(70%);
+}
+
+/* 产品信息样式 */
+.product-name {
+    font-size: 48px;
+    color: var(--very-dark-blue);
+}
+
+.product-description {
+    font-size: 16px;
+    color: var(--grayish-blue);
+}
+
+.discount {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--very-dark-blue);
+}
+
+.discount-tag {
+    font-size: 22px;
+    color: var(--primary-orange);
+    background-color: var(--pale-orange);
+
+}
+
+.percentage-tag {
+    margin-right: 10px; /* 根据需要调整距离 */
+}
+
+.original-price {
+    color: var(--grayish-blue);
+}
+.button-container {
+    display: flex;
+    align-items: center; /* 垂直居中按钮 */
+}
+
+.add-to-cart {
+    display: flex;
+    align-items: center; /* 垂直居中按钮 */
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center; /* 垂直居中按钮 */
+    background-color: var(--grayish-blue); /* 添加背景色，即深一点的白色 */
+    padding: 5px; /* 添加内边距，根据需要调整 */
+    border-radius: 5px; /* 添加圆角，根据需要调整 */
+}
+
+.quantity-button {
+    font-size: 20px;
+    color: var(--primary-orange); /* 文字颜色为橙色 */
+    background-color: transparent; /* 移除按钮的背景色 */
+    border: none;
+    cursor: pointer;
+    margin-right: 10px; /* 添加右侧间距，根据需要调整 */
+}
+
+.selected-quantity {
+    font-size: 20px;
+    color: var(--very-dark-blue); /* 文字颜色为深蓝色 */
+}
+.add-to-cart-button {
+    font-size: 18px;
+    background-color: var(--primary-orange); /* 背景色为橙色 */
+    color: var(--white); /* 文字颜色为白色 */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex; /* 让图标和文本水平排列 */
+    border-radius: 10px;
+    align-items: center; /* 垂直居中图标和文本 */
+    margin-left: 10px; /* 添加左侧间距，根据需要调整 */
+}
+/* 样式代码省略，根据你的需求添加 */
